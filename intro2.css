@@ -1,75 +1,79 @@
 
-/* general fot the whole page */
+/* adding colors and responsiveness */
 
-html {
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    margin: auto;
-    color: rgba(0, 0, 0, 0.822);
-  }
-  
-  body {
-    padding: 2%;
-    text-align: justify;
-  }
-  
-  a {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    display: block;
-    text-align: center;
-  }
-  
-  div {
-    margin: 2%;
-  }
-
-/*small screen size*/
-
-@media screen and (max-width: 480px) {
+@media only screen and (max-width: 479px) {
     body {
-      background-color: rgb(182, 39, 39);
+      background-color: red;
     }
-    #large,
-    #medium,
-    #small {
-      float: none;
-      display: inline-block;
-      width: 95%;
+  }
+  
+  @media only screen and (min-width: 480px) {
+    body {
+      background-color: green;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    body {
+      background-color: lightblue;
+    }
+  }
+  
+  /* second part */ 
+
+  /* 1 adding responsive content */
+
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    #Small { 
+        display: block;
+        font-size: 25px;
     }
   }
 
-/*medium screen size*/
+  /* 1 what it's not */
 
-@media screen and (max-width: 1024px) {
-    body {
-      background-color: rgb(75, 177, 75);
-    }
-    #large {
-      float: left;
-      width: 62%;
-    }
-    #medium {
-      float: right;
-      width: 29%;
-    }
-    #small {
-      clear: both;
-      width: 95%;
+  @media screen and (min-width: 480px) {
+    #Small { 
+        display: none; 
     }
   }
 
-/*large screen size*/
+  /* 2 */
 
-@media screen and (min-width: 1024px) {
-    body {
-      background-color: rgb(58, 115, 189);
+  @media screen and (max-width: 1024px) {
+    #Medium { 
+        display: block;
+        font-size: 20px; 
     }
-    div {
-      float: inline-start;
-      width: 29%;
+  }
+
+   /* 2 what it's not */
+
+   @media screen and (max-width: 480px) {
+    #Medium { 
+        display: none; 
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #Medium { 
+        display: none; 
+    }
+  }
+
+  /* 3 */
+
+  @media screen and (min-width: 1024px) and (max-width: 4000px) {
+    #Large { 
+        display: block;
+        font-size: 15px; 
+    }
+  }
+
+   /* 3 what it's not */
+
+   @media screen and (max-width: 1024px) {
+    #Large { 
+        display: none; 
     }
   }
