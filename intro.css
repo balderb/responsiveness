@@ -1,14 +1,13 @@
-body {
-    background-color: wite;
-  }
-  
-  @media only screen and (max-width: 399px) {
+
+/* adding colors and responsiveness */
+
+  @media only screen and (max-width: 479px) {
     body {
       background-color: red;
     }
   }
   
-  @media only screen and (min-width: 400px) {
+  @media only screen and (min-width: 480px) {
     body {
       background-color: green;
     }
@@ -20,6 +19,65 @@ body {
     }
   }
 
+  /* second part */ 
 
+  /* 1 adding responsive content */
+
+  @media screen and (min-width: 0px) and (max-width: 480px) {
+    #Small { 
+        display: block; 
+    }
+  }
+
+  /* 1 what it's not */
+
+  @media screen and (min-width: 480px) {
+    #Small { 
+        display: none; 
+    }
+  }
+
+  /* 2 */
+
+  @media screen and (max-width: 1024px) {
+    #Medium { 
+        display: block; 
+    }
+  }
+
+   /* 2 what it's not */
+
+   @media screen and (max-width: 480px) {
+    #Medium { 
+        display: none; 
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    #Medium { 
+        display: none; 
+    }
+  }
+
+  /* 3 */
+
+  @media screen and (min-width: 1024px) and (max-width: 4000px) {
+    #Large { 
+        display: block; 
+    }
+  }
+
+   /* 3 what it's not */
+
+   @media screen and (max-width: 1024px) {
+    #Large { 
+        display: none; 
+    }
+  }
+
+
+
+  
+  
 
 
